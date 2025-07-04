@@ -5,22 +5,26 @@ from src.config_loader import get_config
 def embedder(data_splits):
     """
     Initializes and returns an Ollama embedding model along with the provided data splits.
+
     Parameters:
     ----------
     data_splits : list
         A list of langchain.schema.Document objects that represent the content to be embedded.
+
     Returns:
     -------
     tuple
         A tuple containing:
         - ollama_embedding (OllamaEmbeddings): The initialized embedding model.
         - data_splits (list): The original list of documents passed into the function.
+
     Notes:
     -----
     - The embedding model name is loaded from a configuration file via `get_config()`.
     - Component start and end are logged for observability.
     - This function does not perform embedding itself — it prepares the embedder for downstream use.
     - All errors are caught, logged, and the component is gracefully ended on failure.
+    
     Raises:
     -------
     Exception

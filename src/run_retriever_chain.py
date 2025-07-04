@@ -8,13 +8,16 @@ from src.config_loader import get_config
 def invoke_chain(retrieval_chain):
     """
     Executes a retrieval chain with a predefined query and logs the result.
+
     Parameters
     ----------
     retrieval_chain : RetrievalChain
         A LangChain retrieval chain that combines document retrieval and LLM-based response generation.
+
     Returns
     -------
     None
+    
     Notes
     -----
     - The input query is loaded from a configuration file.

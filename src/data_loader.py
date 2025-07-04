@@ -6,10 +6,12 @@ from src.config_loader import get_config
 def data_loader():
     """
     Loads data from a file (either .txt or .pdf) and returns it as a list of LangChain Document objects.
+
     Returns
     -------
     list
         A list of Document objects representing the loaded data.
+        
     Notes
     -----
     - The file path is retrieved from the configuration file under `data_file -> data_file_path`.

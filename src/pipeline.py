@@ -21,9 +21,11 @@ def run_pipeline():
     4. Create a vector database (FAISS or Chroma) using `create_vector_store_db`.
     5. Construct a retrieval chain by combining the retriever and prompt via `build_prompt_chain`.
     6. Invoke the retrieval chain with a configured query using `invoke_chain`.
+    
     Returns
     -------
     None
+
     Notes
     -----
     - Configuration values such as vector store type and query are fetched using `get_config()`.
@@ -33,7 +35,7 @@ def run_pipeline():
     # Load configuration file
     config = get_config()
     vector_store = config["vector_store_db"]
-    
+
     try:
         # Start pipeline logging
         log_component_start(logger_for_pipeline_code, 'Pipeline Component')

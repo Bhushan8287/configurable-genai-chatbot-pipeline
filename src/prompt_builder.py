@@ -9,14 +9,17 @@ def build_prompt_chain(retriever):
     """
     Builds a LangChain retrieval chain using an Ollama LLM, a document combination chain,
     and a prompt template loaded from configuration.
+    
     Parameters
     ----------
     retriever : BaseRetriever
         A retriever instance used to fetch relevant documents based on input queries.
+
     Returns
     -------
     RetrievalChain
         A fully assembled retrieval chain that combines document retrieval and prompt-based response generation.
+        
     Notes
     -----
     - The system instruction for the prompt template is loaded from the configuration file.

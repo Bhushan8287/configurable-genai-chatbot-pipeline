@@ -5,14 +5,17 @@ from src.config_loader import get_config
 def data_splitter(loaded_data):
     """
     Splits input documents into smaller chunks using RecursiveCharacterTextSplitter.
+
     Parameters
     ----------
     loaded_data : list
         A list of documents to be split. Each document should be a LangChain Document object or compatible with the splitter.
+
     Returns
     -------
     list
         A list of smaller document chunks obtained after splitting the original input.
+        
     Notes
     -----
     - Configuration for chunk size and chunk overlap is loaded from the application config.
