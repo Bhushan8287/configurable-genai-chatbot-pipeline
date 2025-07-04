@@ -1,0 +1,19 @@
+data_file:
+  data_file_path: "C:/Users/BW/Desktop/Basic gen ai chatbot project/data/text_data.txt"
+# "C:/Users/BW/Desktop/Basic gen ai chatbot project/data/resume for full time job.pdf"
+
+revursive_text_splitter:
+  chunk_size: 100
+  chunk_overlap: 50
+
+ollama_embedding:
+  embedding_model: "all-minilm:22m"
+
+ollama_model:
+  ollama_llm: "gemma3:1b"
+
+vector_store_db: faiss #[faiss and chroma available]
+
+chatprompttemplate_system_instruction: "You are a professional philosopher with more than 20 years. Use this context:\n{context}\n\nQuestion: {input}" 
+
+query: "what is the importance of philosophy explain in very short ?"

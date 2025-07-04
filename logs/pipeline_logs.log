@@ -1,0 +1,41 @@
+2025-07-04 19:28:12-Loading_config_file_component-INFO-========== Starting Config File Component ==========
+2025-07-04 19:28:12-Loading_config_file_component-INFO-Trying to load the config file to access the data inside it
+2025-07-04 19:28:12-Loading_config_file_component-INFO-Config file has been succesfully loaded
+2025-07-04 19:28:12-Loading_config_file_component-INFO-========== Finished Config File Component ==========
+
+2025-07-04 19:28:13-Pipeline_component-INFO-Pipeline execution has started
+2025-07-04 19:28:13-Data_loader_component-INFO-========== Starting Data Loader Component ==========
+2025-07-04 19:28:13-Data_loader_component-INFO-Data is being loaded
+2025-07-04 19:28:13-Data_loader_component-INFO-Data loaded succesfully
+2025-07-04 19:28:13-Data_loader_component-INFO-========== Finished Data Loader Component ==========
+
+2025-07-04 19:28:13-Data_splitter_component-INFO-========== Starting Data Splitter Component ==========
+2025-07-04 19:28:13-Data_splitter_component-INFO-Data split completed
+2025-07-04 19:28:13-Data_splitter_component-INFO-========== Finished Data Splitter Component ==========
+
+2025-07-04 19:28:13-Embedder_component-INFO-========== Starting Embedder Component ==========
+2025-07-04 19:28:13-Embedder_component-INFO-Embedding model in use: all-minilm:22m
+2025-07-04 19:28:13-Embedder_component-INFO-ollama embedder object passed to next component
+2025-07-04 19:28:13-Embedder_component-INFO-========== Finished Embedder Component ==========
+
+2025-07-04 19:28:13-Vectordb_builder_component-INFO-========== Starting Vectordb Builder Component ==========
+2025-07-04 19:28:13-Vectordb_builder_component-INFO-embedding data splits using
+2025-07-04 19:32:02-faiss.loader-DEBUG-Environment variable FAISS_OPT_LEVEL is not set, so let's pick the instruction set according to the current CPU
+2025-07-04 19:32:02-faiss.loader-INFO-Loading faiss with AVX2 support.
+2025-07-04 19:32:02-faiss.loader-INFO-Successfully loaded faiss with AVX2 support.
+2025-07-04 19:32:02-faiss-INFO-Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-04 19:32:03-Vectordb_builder_component-INFO-Embedding of data splits completed and vector store FAISS is created
+2025-07-04 19:32:03-Vectordb_builder_component-INFO-========== Finished Vectordb Builder Component ==========
+
+2025-07-04 19:32:03-Prompt_builder_component-INFO-========== Starting Prompt Builder Component ==========
+2025-07-04 19:32:03-Prompt_builder_component-INFO-LLM initiated
+2025-07-04 19:32:03-Prompt_builder_component-INFO-Retrievel chain built
+2025-07-04 19:32:03-Retrieval_chain_component-INFO-========== Starting Run Retriever Chain Component ==========
+2025-07-04 19:32:12-Retrieval_chain_component-INFO-Retrieval chain executed
+2025-07-04 19:32:12-Retrieval_chain_component-INFO-LLM's response recieved
+2025-07-04 19:32:12-Retrieval_chain_component-INFO-LLM's response: Ah, a profound question, isn’t it? In essence, philosophy is *critical thinking* distilled into a pursuit of understanding. It’s the systematic exploration of fundamental concepts – truth, morality, existence – not for comfort, but for *meaning*. It’s the bedrock upon which we build ethical frameworks, critical judgments, and ultimately, a more nuanced understanding of ourselves and the world. It’s the ongoing process of questioning *why* – and why not – we think the way we do. 
+
+In short, philosophy helps us ask *better* questions. 
+
+
+2025-07-04 19:32:12-Pipeline_component-INFO-Pipeline execution has finished
