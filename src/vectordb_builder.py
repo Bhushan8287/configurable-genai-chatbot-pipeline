@@ -31,7 +31,7 @@ def create_vector_store_db(data_splits, embedder, vector_storedb):
 
             # Start logging for FAISS vector DB creation
             log_component_start(logger_for_vectordb_builder, 'Vectordb Builder Component')
-            logger_for_vectordb_builder.info('embedding data splits using')
+            logger_for_vectordb_builder.info('Vector store db selected is: FAISS')
 
             # Create FAISS vector store and persist to local disk
             vector_db_faiss = FAISS.from_documents(documents=data_splits, embedding=embedder)
@@ -49,7 +49,7 @@ def create_vector_store_db(data_splits, embedder, vector_storedb):
 
             # Start logging for Chroma vector DB creation
             log_component_start(logger_for_vectordb_builder, 'Vectordb Builder Component')
-            logger_for_vectordb_builder.info('embedding data splits using')
+            logger_for_vectordb_builder.info('Vector store db selected is: CHROMA')
 
             # Create Chroma vector store and persist to local disk
             vector_db_chroma = Chroma.from_documents(
@@ -61,7 +61,7 @@ def create_vector_store_db(data_splits, embedder, vector_storedb):
             # Convert Chroma vector store to retriever
             chroma_retriever = vector_db_chroma.as_retriever()
             
-            logger_for_vectordb_builder.info('Embedding of data splits completed and vector store Chroma is created')
+            logger_for_vectordb_builder.info('Embedding of data splits completed and vector store CHROMA is created')
             log_component_end(logger_for_vectordb_builder, 'Vectordb Builder Component')
             
             return chroma_retriever

@@ -39,8 +39,9 @@ def invoke_chain(retrieval_chain):
 
         # Extract and log the LLM's response
         llm_response = run_chain['answer']
-        logger_for_retrieval_chain.info("LLM's response recieved")
 
+        logger_for_retrieval_chain.info(f'User query: {query}')
+        logger_for_retrieval_chain.info("LLM's response recieved")
         logger_for_retrieval_chain.info(f"LLM's response: {llm_response}")
 
         # End logging for the component

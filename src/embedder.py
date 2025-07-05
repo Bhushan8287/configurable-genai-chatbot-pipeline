@@ -45,7 +45,7 @@ def embedder(data_splits):
         ollama_embedding = OllamaEmbeddings(model=embedding_model)
 
         # Confirm embedder object is ready to be passed forward
-        logger_for_embedder.info('ollama embedder object passed to next component')
+        logger_for_embedder.info('Ollama embedder object passed to next component')
 
         # End logging for the Embedder component
         log_component_end(logger_for_embedder, 'Embedder Component')

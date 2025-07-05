@@ -1,19 +1,34 @@
+# Configurations for the Basic GenAI Chatbot Pipeline
+
 data_file:
-  data_file_path: "C:/Users/BW/Desktop/Basic gen ai chatbot project/data/text_data.txt"
-# "C:/Users/BW/Desktop/Basic gen ai chatbot project/data/resume for full time job.pdf"
+  # Absolute path to the text file or document to be used for context generation
+  data_file_path: "C:/Users/BW/Desktop/Basic gen ai chatbot project/data/critical_thinking_SEP.pdf"
 
 revursive_text_splitter:
-  chunk_size: 100
-  chunk_overlap: 50
+  # Maximum number of characters (tokens) in each chunk
+  chunk_size: 500
+  # Number of overlapping characters between consecutive chunks to preserve context
+  chunk_overlap: 100
 
 ollama_embedding:
-  embedding_model: "all-minilm:22m"
+  # Name of the Ollama embedding model to use for converting text chunks into vectors
+  # Options: ["all-minilm:22m", "mxbai-embed-large:335m", "nomic-embed-text:latest"]
+  embedding_model: "mxbai-embed-large:335m"
 
 ollama_model:
+  # Name of the local Ollama LLM to be used for generating answers
+  # Example options: ["gemma3:1b", "llama3", "mistral", etc. if installed locally]
   ollama_llm: "gemma3:1b"
 
-vector_store_db: faiss #[faiss and chroma available]
+# Vector store database backend to use for storing and querying embeddings
+# Options:
+#   - faiss: In-memory vector DB (faster, lightweight, local)
+#   - chroma: Persistent vector DB (auto-persistence with disk-based storage)
+vector_store_db: chroma
 
-chatprompttemplate_system_instruction: "You are a professional philosopher with more than 20 years. Use this context:\n{context}\n\nQuestion: {input}" 
+# System instruction for the ChatPromptTemplate. This guides how the LLM behaves.
+# You can modify this to reflect different personas, tones, or use-cases.
+chatprompttemplate_system_instruction: "You are a critical thinking expert. Use the context to answer the user's question clearly and concisely. Use this context:\n{context}\n\nQuestion: {input}"
 
-query: "what is the importance of philosophy explain in very short ?"
+# User query that will be passed to the chatbot
+query: "What are the key components of critical thinking explain in very short ?"

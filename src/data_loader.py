@@ -27,22 +27,26 @@ def data_loader():
         # Load configuration and fetch the path to the data file
         config = get_config()
         data_file_path = config['data_file']['data_file_path']
-        logger_for_loading_data.info('Data is being loaded')
 
         # Load text file and wrap content in a Document object
         if data_file_path.endswith(".txt"):
+            logger_for_loading_data.info('Data is being loaded')
             with open(data_file_path, "r", encoding="utf-8") as f:
                 content = f.read()
-            doc = Document(page_content=content, metadata={"source": "text_data.txt"}) # change source as its hardcoded
+            doc = Document(page_content=content, metadata={"source": "SEP_critical_thinking.txt"}) # change source depending on the .txt file used
             loaded_data = [doc]
+            
+            # Log successful loading
+            logger_for_loading_data.info('Data successfully loaded from .txt file')
 
         # Use PyPDFLoader for PDF files
         elif data_file_path.endswith(".pdf"):
+            logger_for_loading_data.info('Data is being loaded')
             pdf_loader = PyPDFLoader(data_file_path)
             loaded_data = pdf_loader.load()
 
-        # Log successful loading
-        logger_for_loading_data.info('Data loaded succesfully')
+            # Log successful loading
+            logger_for_loading_data.info('Data successfully loaded from .pdf file')
 
         # Log end of the data loader component
         log_component_end(logger_for_loading_data, 'Data Loader Component')

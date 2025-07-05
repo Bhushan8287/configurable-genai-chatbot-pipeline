@@ -38,7 +38,7 @@ def data_splitter(loaded_data):
         )
 
         # Log data splitting
-        logger_for_data_splitter.info('Data splitting started')
+        logger_for_data_splitter.info(f'Data splitting started. chunk_size: {chunk_size} and chunk_overlap: {chunk_overlap}')
         
         # Perform the split operation
         data_splits = splitter.split_documents(loaded_data)

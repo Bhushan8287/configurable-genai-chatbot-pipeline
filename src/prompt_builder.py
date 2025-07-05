@@ -38,7 +38,7 @@ def build_prompt_chain(retriever):
 
         # Initialize the Ollama LLM using the model from config
         llm = Ollama(model=ollama_llm)
-        logger_for_prompt_builder.info('LLM initiated')
+        logger_for_prompt_builder.info(f'Selected LLM model: {ollama_llm}')
 
         # Create a chat prompt template using the system instruction from config
         prompt = ChatPromptTemplate.from_template(system_instruction)

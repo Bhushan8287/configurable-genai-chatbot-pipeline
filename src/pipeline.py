@@ -13,6 +13,7 @@ def run_pipeline():
     Orchestrates the entire GenAI pipeline, which includes:
     loading data, splitting it into chunks, embedding it, storing embeddings in a vector database,
     building a retrieval-based prompt chain, and invoking the chain to get an LLM response.
+    
     Workflow Steps
     --------------
     1. Load raw data using the `data_loader` component.
