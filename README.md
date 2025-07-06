@@ -137,7 +137,7 @@ query: "What abilities are needed for thinking critically?"
 ## 📘 Data Source
 
 The data used in `.txt` and `.pdf` files is sourced from the **Stanford Encyclopedia of Philosophy** article on *Critical Thinking*.
-🔗 [Source: SEP - Critical Thinking](https://plato.stanford.edu/entries/critical-thinking/#RequKnow)
+🔗 [Source: SEP - Critical Thinking](https://plato.stanford.edu/entries/critical-thinking/)
 
 All credit goes to SEP.
 
