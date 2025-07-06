@@ -1,4 +1,4 @@
-# 🧠 Configurable GenAI Chatbot Pipeline
+# Configurable GenAI Chatbot Pipeline
 
 A modular, configurable GenAI chatbot pipeline demonstrating foundational GenAI concepts. This project performs end-to-end retrieval-augmented generation (RAG) from data loading to generating responses via LLMs, with support for multiple vector stores and embedding models, using `.txt` and `.pdf` documents as knowledge sources.
 
