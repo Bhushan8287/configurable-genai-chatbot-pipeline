@@ -145,7 +145,6 @@ All credit goes to SEP.
 
 ## 💬 Sample Questions
 
-* What abilities are needed for thinking critically?
 * Explain is the process of critical thinking?
 * Explain the role of dispositions in critical thinking.
 
